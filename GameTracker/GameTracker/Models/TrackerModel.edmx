@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="gctrackerModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Basketball">
+          <Key>
+            <PropertyRef Name="basketballID" />
+          </Key>
+          <Property Name="basketballID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="teamName1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="teamName2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="score1" Type="int" Nullable="false" />
+          <Property Name="score2" Type="int" Nullable="false" />
+          <Property Name="asists1" Type="int" Nullable="false" />
+          <Property Name="asists2" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Hockey">
+          <Key>
+            <PropertyRef Name="hockeyID" />
+          </Key>
+          <Property Name="hockeyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="teamName1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="teamName2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="score1" Type="int" Nullable="false" />
+          <Property Name="score2" Type="int" Nullable="false" />
+          <Property Name="asists1" Type="int" Nullable="false" />
+          <Property Name="asists2" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Paintball">
+          <Key>
+            <PropertyRef Name="paintballID" />
+          </Key>
+          <Property Name="paintballID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="teamName1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="teamName2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="score2" Type="int" Nullable="false" />
+          <Property Name="asists1" Type="int" Nullable="false" />
+          <Property Name="asists2" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Soccer">
+          <Key>
+            <PropertyRef Name="soccerID" />
+          </Key>
+          <Property Name="soccerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="teamName1" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="teamName2" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="score1" Type="int" Nullable="false" />
+          <Property Name="score2" Type="int" Nullable="false" />
+          <Property Name="asists1" Type="int" Nullable="false" />
+          <Property Name="asists2" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="gctrackerModel1StoreContainer">
+          <EntitySet Name="Basketball" EntityType="Self.Basketball" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hockey" EntityType="Self.Hockey" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Paintball" EntityType="Self.Paintball" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Soccer" EntityType="Self.Soccer" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="gctrackerModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Basketball">
+          <Key>
+            <PropertyRef Name="basketballID" />
+          </Key>
+          <Property Name="basketballID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teamName1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="teamName2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="score1" Type="Int32" Nullable="false" />
+          <Property Name="score2" Type="Int32" Nullable="false" />
+          <Property Name="asists1" Type="Int32" Nullable="false" />
+          <Property Name="asists2" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Hockey">
+          <Key>
+            <PropertyRef Name="hockeyID" />
+          </Key>
+          <Property Name="hockeyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teamName1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="teamName2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="score1" Type="Int32" Nullable="false" />
+          <Property Name="score2" Type="Int32" Nullable="false" />
+          <Property Name="asists1" Type="Int32" Nullable="false" />
+          <Property Name="asists2" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Paintball">
+          <Key>
+            <PropertyRef Name="paintballID" />
+          </Key>
+          <Property Name="paintballID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teamName1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="teamName2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="score2" Type="Int32" Nullable="false" />
+          <Property Name="asists1" Type="Int32" Nullable="false" />
+          <Property Name="asists2" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Soccer">
+          <Key>
+            <PropertyRef Name="soccerID" />
+          </Key>
+          <Property Name="soccerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teamName1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="teamName2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="score1" Type="Int32" Nullable="false" />
+          <Property Name="score2" Type="Int32" Nullable="false" />
+          <Property Name="asists1" Type="Int32" Nullable="false" />
+          <Property Name="asists2" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DefaultConnection" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Basketballs" EntityType="Self.Basketball" />
+          <EntitySet Name="Hockeys" EntityType="Self.Hockey" />
+          <EntitySet Name="Paintballs" EntityType="Self.Paintball" />
+          <EntitySet Name="Soccers" EntityType="Self.Soccer" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="gctrackerModel1StoreContainer" CdmEntityContainer="DefaultConnection">
+          <EntitySetMapping Name="Basketballs">
+            <EntityTypeMapping TypeName="gctrackerModel1.Basketball">
+              <MappingFragment StoreEntitySet="Basketball">
+                <ScalarProperty Name="basketballID" ColumnName="basketballID" />
+                <ScalarProperty Name="teamName1" ColumnName="teamName1" />
+                <ScalarProperty Name="teamName2" ColumnName="teamName2" />
+                <ScalarProperty Name="score1" ColumnName="score1" />
+                <ScalarProperty Name="score2" ColumnName="score2" />
+                <ScalarProperty Name="asists1" ColumnName="asists1" />
+                <ScalarProperty Name="asists2" ColumnName="asists2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hockeys">
+            <EntityTypeMapping TypeName="gctrackerModel1.Hockey">
+              <MappingFragment StoreEntitySet="Hockey">
+                <ScalarProperty Name="hockeyID" ColumnName="hockeyID" />
+                <ScalarProperty Name="teamName1" ColumnName="teamName1" />
+                <ScalarProperty Name="teamName2" ColumnName="teamName2" />
+                <ScalarProperty Name="score1" ColumnName="score1" />
+                <ScalarProperty Name="score2" ColumnName="score2" />
+                <ScalarProperty Name="asists1" ColumnName="asists1" />
+                <ScalarProperty Name="asists2" ColumnName="asists2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Paintballs">
+            <EntityTypeMapping TypeName="gctrackerModel1.Paintball">
+              <MappingFragment StoreEntitySet="Paintball">
+                <ScalarProperty Name="paintballID" ColumnName="paintballID" />
+                <ScalarProperty Name="teamName1" ColumnName="teamName1" />
+                <ScalarProperty Name="teamName2" ColumnName="teamName2" />
+                <ScalarProperty Name="score2" ColumnName="score2" />
+                <ScalarProperty Name="asists1" ColumnName="asists1" />
+                <ScalarProperty Name="asists2" ColumnName="asists2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Soccers">
+            <EntityTypeMapping TypeName="gctrackerModel1.Soccer">
+              <MappingFragment StoreEntitySet="Soccer">
+                <ScalarProperty Name="soccerID" ColumnName="soccerID" />
+                <ScalarProperty Name="teamName1" ColumnName="teamName1" />
+                <ScalarProperty Name="teamName2" ColumnName="teamName2" />
+                <ScalarProperty Name="score1" ColumnName="score1" />
+                <ScalarProperty Name="score2" ColumnName="score2" />
+                <ScalarProperty Name="asists1" ColumnName="asists1" />
+                <ScalarProperty Name="asists2" ColumnName="asists2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
